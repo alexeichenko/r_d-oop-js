@@ -1,0 +1,92 @@
+@use "../abstracts";
+
+.schedule {
+  background: url('../../img/background.6c3571e0.jpg') 1300px 0 / auto 150% no-repeat;
+  background-color: var(--global-light-grey);
+  padding: abstracts.function_em(60) 0;
+  &__container {
+  }
+
+  &__list {
+    display: flex;
+    gap: abstracts.function_em(40);
+  }
+
+  &__item {
+  }
+}
+
+.program {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: abstracts.function_em(20);
+
+  &__title {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 32,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+  &__description {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 21,
+      $font-weight: 400,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+  &_members {
+  }
+}
+
+.members-of-program {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+
+  &__item {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(10);
+    background-color: #ffffff7e;
+    padding: abstracts.function_em(40);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--global-light-grey);
+    }
+    &:last-child {
+      box-shadow: 0px 20px 30px -12px #00000018;
+    }
+  }
+  &__name {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 24,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+  &__theme {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-weight: 400,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+  &__date {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 18,
+      $font-family: var(--mono),
+      $font-weight: 400,
+      $line-height: 1.2,
+      $color: var(--global-grey)
+    );
+  }
+}

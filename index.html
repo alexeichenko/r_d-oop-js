@@ -1,11 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="format-detection" content="telephone=no">
+  <title>App OOP Design</title>
 </head>
+
 <body>
-	
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo"><img src="img/svgviewer-png-output.png" alt="DeceptiConf"></a>
+        <ul class="header__location">
+          <li class="header__location_item"><time datetime="2022-04-06">04-06 of April, 2022</time></li>
+          <li class="header__location_item">
+            <address>Los Angeles, CA</address>
+          </li>
+        </ul>
+        <button type="submit" class="header__button">Get your tickets</button>
+      </div>
+      <section class="hero">
+        <div class="hero__content">
+          <div class="hero__title">
+            <h1>A design conference for the dark side.</h1>
+          </div>
+          <ul class="hero__counter">
+            <li class="hero__count">
+              <div class="hero__count_key">Speakers</div>
+              <div class="hero__count_value">18</div>
+            </li>
+            <li class="hero__count">
+              <div class="hero__count_key">People Attending</div>
+              <div class="hero__count_value">2,091</div>
+            </li>
+            <li class="hero__count">
+              <div class="hero__count_key">Venue</div>
+              <div class="hero__count_value">Staples Center</div>
+            </li>
+            <li class="hero__count">
+              <div class="hero__count_key">Location</div>
+              <div class="hero__count_value">Los Angeles</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="speakers">
+        <div class="speakers__container">
+          <div class="speakers__header">
+            <p>Learn from the experts on the cutting-edge of deception at the most sinister companies.</p>
+          </div>
+          <div class="speakers__body">
+            <aside class="speakers__sidebar sidebar">
+              <ul class="sidebar__list">
+                <li class="sidebar__item" id="sidebarItem1">
+                  <div class="sidebar__item_key"><span class="sidebar__accent">Opening Day</span></div>
+                  <div class="sidebar__item_value"><time datetime="2022-04-04">April 4</time></div>
+                </li>
+                <li class="sidebar__item" id="sidebarItem2">
+                  <div class="sidebar__item_key">Speakers & Workshops</div>
+                  <div class="sidebar__item_value"><time datetime="2022-04-05">April 5</time></div>
+                </li>
+                <li class="sidebar__item" id="sidebarItem3">
+                  <div class="sidebar__item_key">Interviews</div>
+                  <div class="sidebar__item_value"><time datetime="2022-04-06">April 6</time></div>
+                </li>
+              </ul>
+            </aside>
+            <div class="speakers__members members">
+              <div class="members__row">
+                <ul class="members__body">
+                  <li id="member1" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name1" class="lector__name"></h2>
+                        <div id="job1" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li id="member2" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name2" class="lector__name"></h2>
+                        <div id="job2" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li id="member3" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name3" class="lector__name"></h2>
+                        <div id="job3" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <div class="members__row">
+                <ul class="members__body">
+                  <li id="member4" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name5" class="lector__name"></h2>
+                        <div id="job5" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li id="member5" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name5" class="lector__name"></h2>
+                        <div id="job5" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li id="member6" class="members__item">
+                    <figure class="lector">
+                      <img src="" alt="" class="lector__image">
+                      <figcaption class="lector__description">
+                        <h2 id="name6" class="lector__name"></h2>
+                        <div id="job6" class="lector__job"></div>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="cta__container">
+          <div class="cta__content">
+            <div class="cta__title">
+              <h2>Our three day schedule is jam-packed with brilliant, creative, evil geniuses.</h2>
+            </div>
+            <div class="cta__text">
+              <p>The worst people industry giving the best talks you've ever seen. Nothing will be recorded and every attendee has to sign an NDA to watch the talks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="schedule">
+        <div class="schedule__container">
+          <ul class="schedule__list">
+            <li class="schedule__item program">
+              <div class="program__title">
+                <h3><time datetime="2022-04-04">April 4</time></h3>
+              </div>
+              <div class="program__description">
+                The first day of the conference is focused on dark patterns for ecommerce.
+              </div>
+              <ul class="program__members members-of-program">
+                <li class="members-of-program__item" id="lector1">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Not so one-time payments</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">9:00AM - 10:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector2">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">The finer print</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">10:00AM - 11:00AM PST</time>
+                </li>
+              </ul>
+            </li>
+            <li class="schedule__item program">
+              <div class="program__title">
+                <h3><time datetime="2022-04-05">April 5</time></h3>
+              </div>
+              <div class="program__description">
+                Next we spend the day talking about deceiving people with technology.
+              </div>
+              <ul class="program__members members-of-program">
+                <li class="members-of-program__item" id="lector3">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">The invisible card reader</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">9:00AM - 10:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector4">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Stealing fingerprints</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">10:00AM - 11:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector5">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Voting machines</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">11:00AM - 12:00AM PST</time>
+                </li>
+              </ul>
+            </li>
+            <li class="schedule__item program">
+              <div class="program__title">
+                <h3><time datetime="2022-04-05">April 6</time></h3>
+              </div>
+              <div class="program__description">
+                We close out the event previewing new techniques that are still in development.
+              </div>
+              <ul class="program__members members-of-program">
+                <li class="members-of-program__item" id="lector6">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Neuralink dark patterns</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">9:00AM - 10:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector7">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">DALL-E for passports</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">10:00AM - 11:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector8">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Quantum password cracking</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">11:00AM - 12:00AM PST</time>
+                </li>
+                <li class="members-of-program__item" id="lector9">
+                  <h4 class="members-of-program__name"></h4>
+                  <h5 class="members-of-program__theme">Knowing the game and playing it</h5>
+                  <time datetime="2022-04-04T9:00" class="members-of-program__date">3:00PM - 4:00PM PST</time>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sponsors">
+        <div class="sponsors__container">
+          <div class="sponsors__header">
+            <div class="sponsors__title">
+              <h2>Current sponsorships for our workshops and speakers.</h2>
+            </div>
+          </div>
+          <ul class="sponsors__list">
+            <li class="sponsors__item"><img src="img/transistor.a1e38d49.svg" alt="sponsor"></li>
+            <li class="sponsors__item"><img src="img/tuple.2f54ed03.svg" alt="sponsor"></li>
+            <li class="sponsors__item"><img src="img/statickit.2e06fcea.svg" alt="sponsor"></li>
+            <li class="sponsors__item"><img src="img/mirage.e12f40ad.svg" alt="sponsor"></li>
+            <li class="sponsors__item"><img src="img/laravel.6faebf7c.svg" alt="sponsor"></li>
+            <li class="sponsors__item"><img src="img/statamic.923101b6.svg" alt="sponsor"></li>
+          </ul>
+        </div>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter__container">
+          <div class="newsletter__cta">
+            <div class="newsletter__title">
+              <h2>Stay up to date</h2>
+            </div>
+            <div class="newsletter__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, cumque!
+            </div>
+          </div>
+          <form class="newsletter__form">
+            <span>
+              <caption>Sing up to our newsletter &darr;</caption>
+            </span>
+            <div class="newsletter__singup">
+              <input type="email" name="email" id="email" placeholder="Email address" class="newsletter__email">
+              <button type="submit" class="newsletter__button">Sing up today</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="index.html" class="footer__logo"><img src="img/svgviewer-png-output.png" alt="DeceptiConf"></a>
+        <div class="footer__copy">Copyright &copy; 2024 DeceptiConf, LLC. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+  <script defer src="js/app.js"></script>
 </body>
+
 </html>

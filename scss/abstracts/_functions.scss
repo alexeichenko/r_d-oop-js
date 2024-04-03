@@ -1,0 +1,22 @@
+@use 'sass:math';
+// Calcs:
+// To %
+@function prc($pxOne, $pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100%;
+  @return $result;
+}
+// REM
+@function rem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+// EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+// px to vw
+@function vw($px) {
+	$result: math.div($px, 12) + vw;
+	@return $result;
+};
