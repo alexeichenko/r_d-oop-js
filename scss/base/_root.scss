@@ -1,0 +1,14 @@
+@use '../abstracts';
+
+:root {
+  // colors
+  @each $color, $shades in abstracts.$color_colors {
+    @each $shade, $value in $shades {
+      #{$color}#{$shade}: #{$value};
+    };
+  };
+  // font-families
+  @each $family, $font in abstracts.$font_font-family {
+    #{$family}: #{$font};
+  };
+};

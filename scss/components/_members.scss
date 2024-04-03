@@ -1,0 +1,37 @@
+@use "../abstracts";
+.members {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: abstracts.function_em(40);
+  &__row {
+    display: flex;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+  }
+  &__item {
+    flex: 0 1 30.333%;
+  }
+}
+
+.lector {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: abstracts.function_em(20);
+  &__image {
+    border-radius: 25px;
+  }
+  &__description {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(10);
+  }
+  &__name {
+    @include abstracts.mixin_font($cl-ratio: 1.2, $cl-px: 24, $font-weight: 600, $color: var(--global-black));
+  }
+  &__job {
+    @include abstracts.mixin_font($cl-ratio: 1.1, $cl-px: 18, $font-weight: 400, $color: var(--global-grey));
+  }
+}

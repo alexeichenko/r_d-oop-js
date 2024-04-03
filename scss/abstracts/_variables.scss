@@ -1,0 +1,11 @@
+@use 'functions' as function;
+$containerWidth: 1200;
+// Брейк-поінти:
+// ПК, ноутбуки, деякі планшети в горизонтальному положенні
+$pc: function.em($containerWidth);
+// Планшеты, деякі телефони в горизонтальному положенні
+$tablet: function.em(991.98);
+// Телефони L
+$mobile: function.em(767.98);
+// Телефони S
+$mobileSmall: function.em(479.98);

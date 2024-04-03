@@ -1,0 +1,40 @@
+@use "../abstracts";
+
+.sponsors {
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(100);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.4,
+      $cl-px: 56,
+      $font-weight: 600,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: abstracts.function_em(60);
+    
+  }
+  &__item {
+    flex: 0 1 29.333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

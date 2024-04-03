@@ -1,0 +1,70 @@
+@use 'variables' as *;
+@use 'functions' as *;
+// ____________________________
+// Selector With Few Values
+@mixin selectorWithFewValues($selector, $properties...) {
+  #{$selector}: $properties;
+};
+// ____________________________
+// ____________________________
+// Clamp
+@mixin clamp($propertie, $ratio: 1.618033988749, $px) {
+  $min: calc($px / $ratio);
+  $curr: calc($px / 12);
+  #{$propertie}: clamp(rem($min), #{$curr}vw, rem($px));
+};
+// ____________________________
+// Font styling
+@mixin font($font-family: null,
+$font-size: clamp, $cl-propertie: font-size, $cl-ratio: null, $cl-px: 18,
+$font-weight: 400,
+$line-height: null,
+$letter-spacing: null,
+$text-align: null,
+$text-transform: null,
+$color: null
+) {
+  // Font Family
+  @if ($font-family == sans) {
+    font-family: var(--sans);
+  } @else if ($font-family == serif) {
+    font-family: var(--serif);
+  } @else if($font-family == mono) {
+    font-family: var(--mono);
+  } @else if(font-family != null) {
+    font-family: $font-family;
+  };
+  // Font Size
+  @if ($font-size == clamp) {
+    @if ($cl-ratio != null) {
+      @include clamp($propertie: $cl-propertie, $ratio: $cl-ratio, $px: $cl-px);
+    } @else if ($cl-ratio == null) {
+      @include clamp($propertie: $cl-propertie, $px: $cl-px);
+    };
+  } @else {
+    font-size: rem($font-size);
+  };
+  // Font Weight
+  font-weight: $font-weight;
+  // Line Height
+  @if (line-height != null) {
+    line-height: $line-height;
+  }
+  // Letter Spacing
+  @if (letter-spacing != null) {
+    letter-spacing: $letter-spacing;
+  };
+  // Text Align
+  @if (text-align != null) {
+    text-align: $text-align;
+  };
+  //  Text Transform
+  @if (text-transform != null) {
+    text-transform: $text-transform;
+  };
+  // Color
+  @if (color != null) {
+    color: $color;
+  };
+};
+// ____________________________

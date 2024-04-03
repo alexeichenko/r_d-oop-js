@@ -1,0 +1,113 @@
+@use "../abstracts";
+@use "../components/sidebar" as *;
+@use "../components/members" as *;
+@use "../components/schedule" as *;
+@use "../components/sponsors" as *;
+@use "../components/newsletter-form" as *;
+
+body {
+  font-family: var(--sans);
+}
+
+// ==============================
+// #SECTIONS
+
+// ==============================
+
+// speakers
+
+.speakers {
+  margin: abstracts.function_em(40) 0 abstracts.function_em(120) 0;
+  box-shadow: 0px -30px 40px 40px #fff;
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(120);
+  }
+  &__header {
+    width: min(abstracts.function_rem(850), 100% - 4rem);
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.1,
+      $cl-px: 32,
+      $font-weight: 400,
+      $line-height: 1.6,
+      $color: var(--primary-300)
+    );
+  }
+  &__body {
+    display: flex;
+  }
+  &__sidebar {
+    flex: 0.25;
+  }
+  &__members {
+    flex: 0.75;
+  }
+}
+
+// ==============================
+
+// CTA
+
+.cta {
+  margin-bottom: abstracts.function_em(60);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: min(abstracts.function_rem(1100), 100% - 4rem);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(20);
+    text-align: center;
+    align-items: center;
+  }
+
+  &__title {
+    @include abstracts.mixin_font($cl-px: 56, $font-weight: 600, $line-height: 1.2, $color: var(--primary-200));
+    & h2 {
+      text-wrap: initial;
+    }
+  }
+
+  &__text {
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 32,
+      $font-weight: 400,
+      $line-height: 1.2,
+      $color: var(--primary-300)
+    );
+  }
+}
+
+// ==============================
+
+// Schedule
+
+.schedule {
+  margin-bottom: abstracts.function_em(60);
+  // box-shadow: inset 0px 0px 50px 50px #fff;
+  box-shadow: #fff 0px -70px 60px -12px inset, #fff 0px 70px 60px -12px inset;
+}
+
+// box-shadow: rgba(50, 50, 93, 0.25) , rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+// ==============================
+
+// Sponsors
+
+.sponsors {
+  margin-bottom: abstracts.function_em(150);
+}
+
+// ==============================
+
+// Newsletter
+
+.newsletter {
+  margin-bottom: abstracts.function_em(20);
+}

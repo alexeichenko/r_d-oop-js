@@ -1,0 +1,19 @@
+@use '../abstracts';
+
+.footer {
+  padding: abstracts.function_em(60) 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  };
+  &__logo {
+    & img {
+      width: 150px;
+    };
+  };
+  &__copy {
+    color: var(--global-grey);
+    word-spacing: 3px;
+  };
+};

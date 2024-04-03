@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as variable;
+
+$breakpoints: (
+  pc: variable.$pc,
+  tablet: variable.$tablet,
+  mobile: variable.$mobile,
+  phone: variable.$mobileSmall
+);
+
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else if type-of($size) == number and not unitless($size) {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @error 'The `@mixin mq()` requires either a number with a unit, or a key from $breakpoints. You entered: `#{$size}`.';
+  }
+}

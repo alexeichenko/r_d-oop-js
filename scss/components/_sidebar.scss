@@ -1,0 +1,96 @@
+@use "../abstracts";
+
+.sidebar {
+
+  &__accent {
+    color: var(--primary-200);
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(70);
+    position: relative;
+    padding-left: abstracts.function_em(25);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3%;
+      left: 0;
+      width: 2px;
+      height: 95%;
+      background-color: var(--global-light-grey);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(15);
+
+    &_key {
+      @include abstracts.mixin_font(
+        $font-family: var(--mono),
+        $cl-ratio: 1.1,
+        $cl-px: 18,
+        $font-weight: 400,
+        $color: var(--global-grey)
+      );
+    }
+
+    &_value {
+      @include abstracts.mixin_font($cl-ratio: 1.2, $cl-px: 28, $font-weight: 600, $color: var(--primary-300));
+    }
+
+  }
+};
+
+#sidebarItem1 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--primary-200);
+    transform: rotate(180deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--primary-200);
+  }
+}
+
+#sidebarItem2, #sidebarItem3 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--global-grey);
+    transform: rotate(180deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--global-grey);
+  }
+};
